@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export default async function handler(res) {
-  const userId = 926549832527667210;
+export default async function handler(req, res) {
+  const userId = req.query.id; // Ahora tomamos el ID de la URL
   const apiKey = process.env.RAPIDAPI_KEY;
 
   if (!userId) {
